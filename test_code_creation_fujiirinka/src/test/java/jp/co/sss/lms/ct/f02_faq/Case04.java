@@ -60,7 +60,7 @@ public class Case04 {
 		webDriver.findElement(By.id("password")).sendKeys("StudentAA02");
 		webDriver.findElement(By.className("btn")).click();
 
-		// 検証：コース詳細画面への遷移の確認
+		// 検証：コース詳細画面への遷移
 		assertEquals("コース詳細 | LMS", webDriver.getTitle());
 
 		// エビデンスの取得
@@ -77,7 +77,7 @@ public class Case04 {
 		webDriver.findElement(By.linkText("機能")).click();
 		webDriver.findElement(By.linkText("ヘルプ")).click();
 
-		// 検証：ヘルプ画面への遷移の確認
+		// 検証：ヘルプ画面への遷移
 		assertEquals("ヘルプ | LMS", webDriver.getTitle());
 
 		// エビデンスの取得
@@ -89,6 +89,7 @@ public class Case04 {
 	@Order(4)
 	@DisplayName("テスト04 「よくある質問」リンクからよくある質問画面を別タブに開く")
 	void test04() {
+
 		// 「よくある質問」をクリック
 		webDriver.findElement(By.linkText("よくある質問")).click();
 
